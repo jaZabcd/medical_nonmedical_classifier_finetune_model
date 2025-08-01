@@ -1,0 +1,6 @@
+timm
+torchvision
+pillow
+medmnist
+opendatasets
+icrawler
