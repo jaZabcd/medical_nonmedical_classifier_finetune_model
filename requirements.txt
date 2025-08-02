@@ -4,3 +4,8 @@ pillow
 medmnist
 opendatasets
 icrawler
+matplotlib
+seaborn
+pymupdf
+selenium
+aiohttp

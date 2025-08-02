@@ -1,6 +1,5 @@
 import os
 from torchvision import transforms, datasets
-from sklearn.model_selection import train_test_split
 import torch
 from collections import Counter
 import torch.nn as nn
@@ -119,7 +118,7 @@ def train():
         val_acc = evaluate()
         print(f"Epoch {epoch+1}/{NUM_EPOCH} - Train Loss: {epoch_loss:.4f} Acc: {epoch_acc:.4f} - Val Acc: {val_acc:.4f}")
 
-        with open("training_log.csv", "a", newline="") as f:
+        with open(os.path.join(OUTPUT_DIR,"training_log.csv"), "a", newline="") as f:
             writer = csv.writer(f)
             writer.writerow([epoch+1, epoch_loss, epoch_acc.item(), val_acc])
 
