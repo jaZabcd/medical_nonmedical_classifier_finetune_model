@@ -9,3 +9,5 @@ seaborn
 pymupdf
 selenium
 aiohttp
+streamlit
+psutil

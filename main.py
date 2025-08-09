@@ -1,6 +1,26 @@
-def main():
-    print("Hello from medical-image-classification!")
+from src.classifier import ImageClassifier  
+from logger import logging
+from exception.exception_handing import CustomExceptionHandling
+import sys
 
+def main(path):
+    try:
+        model_path = "training_output/efficientnetb0_finetuned.pth"
+        classifier = ImageClassifier(model_path)
 
-if __name__ == "__main__":
-    main()
+        # Example: classify images from a URL
+        
+        logging.logging.info(f"Classifying images from URL: {path}")
+        results = classifier.classify(path)
+
+        for name, label in results:
+            print(f"{name} => {label}")
+            logging.logging.info(f"{name} => {label}")
+
+    except Exception as e:
+        logging.logging.error("Unhandled error in main")
+        raise CustomExceptionHandling(e, sys)
+
+# if __name__ == "__main__":
+#     path = "https://en.wikipedia.org/wiki/Cancer"
+#     main(path)

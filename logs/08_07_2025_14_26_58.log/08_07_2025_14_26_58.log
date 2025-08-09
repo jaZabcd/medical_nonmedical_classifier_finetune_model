@@ -1,0 +1,164 @@
+[2025-08-07 14:27:00,860] 19 root - INFO - INFO - \U0001f527 Initializing ImageClassifier
+[2025-08-07 14:27:00,860] 18 root - INFO - INFO - \U0001f504 Starting model loading process
+[2025-08-07 14:27:00,860] 22 root - INFO - INFO - \U0001f4df Using device: cpu
+[2025-08-07 14:27:00,987] 32 root - INFO - INFO - \u2705 Model loaded successfully on cpu
+[2025-08-07 14:27:00,987] 22 root - INFO - INFO - \u2705 Model initialized and ready for inference.
+[2025-08-07 14:27:00,987] 13 root - INFO - INFO - Classifying images from URL: https://en.wikipedia.org/wiki/Cancer
+[2025-08-07 14:27:00,987] 75 root - INFO - INFO - \U0001f50e Starting classification for input type: url
+[2025-08-07 14:27:00,987] 50 root - INFO - INFO - \U0001f4e5 Detected input type: URL
+[2025-08-07 14:27:03,662] 31 root - INFO - INFO - \U0001f310 Opening: https://en.wikipedia.org/wiki/Cancer
+[2025-08-07 14:27:12,639] 37 root - INFO - INFO - \U0001f5bc\ufe0f Found 40 image sources.
+[2025-08-07 14:27:13,169] 55 root - INFO - INFO - \u274c Failed to decode image bytes: cannot identify image file <_io.BytesIO object at 0x000001FFAE05C540>
+[2025-08-07 14:27:13,174] 55 root - INFO - INFO - \u274c Failed to decode image bytes: cannot identify image file <_io.BytesIO object at 0x000001FFAD04C450>
+[2025-08-07 14:27:13,174] 55 root - INFO - INFO - \u274c Failed to decode image bytes: cannot identify image file <_io.BytesIO object at 0x000001FFAE05D440>
+[2025-08-07 14:27:13,174] 55 root - INFO - INFO - \u274c Failed to decode image bytes: cannot identify image file <_io.BytesIO object at 0x000001FFAD04D0D0>
+[2025-08-07 14:27:13,352] 114 root - INFO - INFO - 
+\u2705 Extracted 36 images.
+[2025-08-07 14:27:13,352] 115 root - INFO - INFO - \u23f1\ufe0f Processing Time: 12.36 seconds
+[2025-08-07 14:27:13,352] 116 root - INFO - INFO - \U0001f4be Memory Usage: Current = 2639.51 KB, Peak = 6352.25 KB
+[2025-08-07 14:27:13,352] 117 root - INFO - INFO - Image Extraction Completed
+[2025-08-07 14:27:13,353] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:13,480] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:13,480] 85 root - INFO - INFO - \U0001f4f8 Image 1 classified as non-medical
+[2025-08-07 14:27:13,480] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:13,518] 32 root - INFO - INFO - \U0001f50d Prediction: medical (class index: 0)
+[2025-08-07 14:27:13,518] 85 root - INFO - INFO - \U0001f4f8 Image 2 classified as medical
+[2025-08-07 14:27:13,518] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:13,542] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:13,542] 85 root - INFO - INFO - \U0001f4f8 Image 3 classified as non-medical
+[2025-08-07 14:27:13,542] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:13,589] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:13,589] 85 root - INFO - INFO - \U0001f4f8 Image 4 classified as non-medical
+[2025-08-07 14:27:13,589] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:13,625] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:13,625] 85 root - INFO - INFO - \U0001f4f8 Image 5 classified as non-medical
+[2025-08-07 14:27:13,625] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:13,652] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:13,652] 85 root - INFO - INFO - \U0001f4f8 Image 6 classified as non-medical
+[2025-08-07 14:27:13,652] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:13,685] 32 root - INFO - INFO - \U0001f50d Prediction: medical (class index: 0)
+[2025-08-07 14:27:13,685] 85 root - INFO - INFO - \U0001f4f8 Image 7 classified as medical
+[2025-08-07 14:27:13,685] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:13,730] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:13,730] 85 root - INFO - INFO - \U0001f4f8 Image 8 classified as non-medical
+[2025-08-07 14:27:13,730] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:13,762] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:13,762] 85 root - INFO - INFO - \U0001f4f8 Image 9 classified as non-medical
+[2025-08-07 14:27:13,762] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:13,793] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:13,793] 85 root - INFO - INFO - \U0001f4f8 Image 10 classified as non-medical
+[2025-08-07 14:27:13,793] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:13,839] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:13,839] 85 root - INFO - INFO - \U0001f4f8 Image 11 classified as non-medical
+[2025-08-07 14:27:13,839] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:13,869] 32 root - INFO - INFO - \U0001f50d Prediction: medical (class index: 0)
+[2025-08-07 14:27:13,869] 85 root - INFO - INFO - \U0001f4f8 Image 12 classified as medical
+[2025-08-07 14:27:13,869] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:13,901] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:13,901] 85 root - INFO - INFO - \U0001f4f8 Image 13 classified as non-medical
+[2025-08-07 14:27:13,901] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:13,955] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:13,955] 85 root - INFO - INFO - \U0001f4f8 Image 14 classified as non-medical
+[2025-08-07 14:27:13,955] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:14,001] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:14,001] 85 root - INFO - INFO - \U0001f4f8 Image 15 classified as non-medical
+[2025-08-07 14:27:14,001] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:14,039] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:14,039] 85 root - INFO - INFO - \U0001f4f8 Image 16 classified as non-medical
+[2025-08-07 14:27:14,039] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:14,073] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:14,073] 85 root - INFO - INFO - \U0001f4f8 Image 17 classified as non-medical
+[2025-08-07 14:27:14,073] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:14,127] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:14,128] 85 root - INFO - INFO - \U0001f4f8 Image 18 classified as non-medical
+[2025-08-07 14:27:14,128] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:14,155] 32 root - INFO - INFO - \U0001f50d Prediction: medical (class index: 0)
+[2025-08-07 14:27:14,155] 85 root - INFO - INFO - \U0001f4f8 Image 19 classified as medical
+[2025-08-07 14:27:14,155] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:14,202] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:14,202] 85 root - INFO - INFO - \U0001f4f8 Image 20 classified as non-medical
+[2025-08-07 14:27:14,202] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:14,233] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:14,233] 85 root - INFO - INFO - \U0001f4f8 Image 21 classified as non-medical
+[2025-08-07 14:27:14,233] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:14,265] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:14,265] 85 root - INFO - INFO - \U0001f4f8 Image 22 classified as non-medical
+[2025-08-07 14:27:14,265] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:14,312] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:14,312] 85 root - INFO - INFO - \U0001f4f8 Image 23 classified as non-medical
+[2025-08-07 14:27:14,312] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:14,359] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:14,359] 85 root - INFO - INFO - \U0001f4f8 Image 24 classified as non-medical
+[2025-08-07 14:27:14,359] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:14,403] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:14,403] 85 root - INFO - INFO - \U0001f4f8 Image 25 classified as non-medical
+[2025-08-07 14:27:14,403] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:14,451] 32 root - INFO - INFO - \U0001f50d Prediction: medical (class index: 0)
+[2025-08-07 14:27:14,451] 85 root - INFO - INFO - \U0001f4f8 Image 26 classified as medical
+[2025-08-07 14:27:14,451] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:14,542] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:14,542] 85 root - INFO - INFO - \U0001f4f8 Image 27 classified as non-medical
+[2025-08-07 14:27:14,542] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:14,607] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:14,621] 85 root - INFO - INFO - \U0001f4f8 Image 28 classified as non-medical
+[2025-08-07 14:27:14,621] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:14,679] 32 root - INFO - INFO - \U0001f50d Prediction: medical (class index: 0)
+[2025-08-07 14:27:14,679] 85 root - INFO - INFO - \U0001f4f8 Image 29 classified as medical
+[2025-08-07 14:27:14,679] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:14,724] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:14,724] 85 root - INFO - INFO - \U0001f4f8 Image 30 classified as non-medical
+[2025-08-07 14:27:14,724] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:14,762] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:14,762] 85 root - INFO - INFO - \U0001f4f8 Image 31 classified as non-medical
+[2025-08-07 14:27:14,762] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:14,806] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:14,806] 85 root - INFO - INFO - \U0001f4f8 Image 32 classified as non-medical
+[2025-08-07 14:27:14,806] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:14,856] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:14,856] 85 root - INFO - INFO - \U0001f4f8 Image 33 classified as non-medical
+[2025-08-07 14:27:14,856] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:14,889] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:14,889] 85 root - INFO - INFO - \U0001f4f8 Image 34 classified as non-medical
+[2025-08-07 14:27:14,889] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:14,940] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:14,940] 85 root - INFO - INFO - \U0001f4f8 Image 35 classified as non-medical
+[2025-08-07 14:27:14,940] 21 root - INFO - INFO - \U0001f5a5\ufe0f Using device: cpu
+[2025-08-07 14:27:14,986] 32 root - INFO - INFO - \U0001f50d Prediction: non-medical (class index: 1)
+[2025-08-07 14:27:14,986] 85 root - INFO - INFO - \U0001f4f8 Image 36 classified as non-medical
+[2025-08-07 14:27:14,986] 88 root - INFO - INFO - \u2705 Classification completed
+[2025-08-07 14:27:14,986] 18 root - INFO - INFO - Image 1 => non-medical
+[2025-08-07 14:27:14,986] 18 root - INFO - INFO - Image 2 => medical
+[2025-08-07 14:27:14,986] 18 root - INFO - INFO - Image 3 => non-medical
+[2025-08-07 14:27:14,986] 18 root - INFO - INFO - Image 4 => non-medical
+[2025-08-07 14:27:14,986] 18 root - INFO - INFO - Image 5 => non-medical
+[2025-08-07 14:27:14,986] 18 root - INFO - INFO - Image 6 => non-medical
+[2025-08-07 14:27:14,986] 18 root - INFO - INFO - Image 7 => medical
+[2025-08-07 14:27:14,986] 18 root - INFO - INFO - Image 8 => non-medical
+[2025-08-07 14:27:14,986] 18 root - INFO - INFO - Image 9 => non-medical
+[2025-08-07 14:27:14,986] 18 root - INFO - INFO - Image 10 => non-medical
+[2025-08-07 14:27:14,986] 18 root - INFO - INFO - Image 11 => non-medical
+[2025-08-07 14:27:14,986] 18 root - INFO - INFO - Image 12 => medical
+[2025-08-07 14:27:14,986] 18 root - INFO - INFO - Image 13 => non-medical
+[2025-08-07 14:27:14,986] 18 root - INFO - INFO - Image 14 => non-medical
+[2025-08-07 14:27:14,986] 18 root - INFO - INFO - Image 15 => non-medical
+[2025-08-07 14:27:14,986] 18 root - INFO - INFO - Image 16 => non-medical
+[2025-08-07 14:27:14,989] 18 root - INFO - INFO - Image 17 => non-medical
+[2025-08-07 14:27:14,989] 18 root - INFO - INFO - Image 18 => non-medical
+[2025-08-07 14:27:14,989] 18 root - INFO - INFO - Image 19 => medical
+[2025-08-07 14:27:14,989] 18 root - INFO - INFO - Image 20 => non-medical
+[2025-08-07 14:27:14,989] 18 root - INFO - INFO - Image 21 => non-medical
+[2025-08-07 14:27:14,989] 18 root - INFO - INFO - Image 22 => non-medical
+[2025-08-07 14:27:14,989] 18 root - INFO - INFO - Image 23 => non-medical
+[2025-08-07 14:27:14,989] 18 root - INFO - INFO - Image 24 => non-medical
+[2025-08-07 14:27:14,989] 18 root - INFO - INFO - Image 25 => non-medical
+[2025-08-07 14:27:14,989] 18 root - INFO - INFO - Image 26 => medical
+[2025-08-07 14:27:14,989] 18 root - INFO - INFO - Image 27 => non-medical
+[2025-08-07 14:27:14,989] 18 root - INFO - INFO - Image 28 => non-medical
+[2025-08-07 14:27:14,989] 18 root - INFO - INFO - Image 29 => medical
+[2025-08-07 14:27:14,989] 18 root - INFO - INFO - Image 30 => non-medical
+[2025-08-07 14:27:14,989] 18 root - INFO - INFO - Image 31 => non-medical
+[2025-08-07 14:27:14,989] 18 root - INFO - INFO - Image 32 => non-medical
+[2025-08-07 14:27:14,989] 18 root - INFO - INFO - Image 33 => non-medical
+[2025-08-07 14:27:14,989] 18 root - INFO - INFO - Image 34 => non-medical
+[2025-08-07 14:27:14,989] 18 root - INFO - INFO - Image 35 => non-medical
+[2025-08-07 14:27:14,989] 18 root - INFO - INFO - Image 36 => non-medical

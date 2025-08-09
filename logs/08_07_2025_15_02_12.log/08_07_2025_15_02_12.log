@@ -1,0 +1,85 @@
+[2025-08-07 15:02:14,862] 19 root - INFO - INFO - \U0001f527 Initializing ImageClassifier
+[2025-08-07 15:02:14,862] 18 root - INFO - INFO - \U0001f504 Starting model loading process
+[2025-08-07 15:02:14,862] 22 root - INFO - INFO - \U0001f4df Using device: cpu
+[2025-08-07 15:02:14,945] 32 root - INFO - INFO - \u2705 Model loaded successfully on cpu
+[2025-08-07 15:02:14,945] 22 root - INFO - INFO - \u2705 Model initialized and ready for inference.
+[2025-08-07 15:02:20,018] 19 root - INFO - INFO - \U0001f527 Initializing ImageClassifier
+[2025-08-07 15:02:20,018] 18 root - INFO - INFO - \U0001f504 Starting model loading process
+[2025-08-07 15:02:20,018] 22 root - INFO - INFO - \U0001f4df Using device: cpu
+[2025-08-07 15:02:20,242] 19 root - INFO - INFO - \U0001f527 Initializing ImageClassifier
+[2025-08-07 15:02:20,242] 18 root - INFO - INFO - \U0001f504 Starting model loading process
+[2025-08-07 15:02:20,242] 22 root - INFO - INFO - \U0001f4df Using device: cpu
+[2025-08-07 15:02:20,346] 32 root - INFO - INFO - \u2705 Model loaded successfully on cpu
+[2025-08-07 15:02:20,346] 22 root - INFO - INFO - \u2705 Model initialized and ready for inference.
+[2025-08-07 15:02:20,783] 32 root - INFO - INFO - \u2705 Model loaded successfully on cpu
+[2025-08-07 15:02:20,783] 22 root - INFO - INFO - \u2705 Model initialized and ready for inference.
+[2025-08-07 15:02:20,783] 24 root - INFO - INFO - Detected URL: https://en.wikipedia.org/wiki/Cancer
+[2025-08-07 15:02:20,783] 76 root - ERROR - ERROR - Exception in main Streamlit app:
+[2025-08-07 15:02:20,783] 77 root - ERROR - ERROR - object of type 'coroutine' has no len()
+[2025-08-07 15:03:42,366] 19 root - INFO - INFO - \U0001f527 Initializing ImageClassifier
+[2025-08-07 15:03:42,367] 18 root - INFO - INFO - \U0001f504 Starting model loading process
+[2025-08-07 15:03:42,367] 22 root - INFO - INFO - \U0001f4df Using device: cpu
+[2025-08-07 15:03:42,448] 32 root - INFO - INFO - \u2705 Model loaded successfully on cpu
+[2025-08-07 15:03:42,448] 22 root - INFO - INFO - \u2705 Model initialized and ready for inference.
+[2025-08-07 15:03:42,448] 27 root - INFO - INFO - Detected URL: https://en.wikipedia.org/wiki/Cancer
+[2025-08-07 15:03:43,606] 31 root - INFO - INFO - \U0001f310 Opening: https://en.wikipedia.org/wiki/Cancer
+[2025-08-07 15:03:50,566] 37 root - INFO - INFO - \U0001f5bc\ufe0f Found 40 image sources.
+[2025-08-07 15:03:51,332] 55 root - INFO - INFO - \u274c Failed to decode image bytes: cannot identify image file <_io.BytesIO object at 0x00000200D6515BC0>
+[2025-08-07 15:03:51,333] 55 root - INFO - INFO - \u274c Failed to decode image bytes: cannot identify image file <_io.BytesIO object at 0x00000200D1843650>
+[2025-08-07 15:03:51,333] 55 root - INFO - INFO - \u274c Failed to decode image bytes: cannot identify image file <_io.BytesIO object at 0x00000200D652B010>
+[2025-08-07 15:03:51,333] 55 root - INFO - INFO - \u274c Failed to decode image bytes: cannot identify image file <_io.BytesIO object at 0x00000200D53E7C90>
+[2025-08-07 15:03:51,515] 114 root - INFO - INFO - 
+\u2705 Extracted 36 images.
+[2025-08-07 15:03:51,515] 115 root - INFO - INFO - \u23f1\ufe0f Processing Time: 9.05 seconds
+[2025-08-07 15:03:51,516] 116 root - INFO - INFO - \U0001f4be Memory Usage: Current = 2618.74 KB, Peak = 3629.30 KB
+[2025-08-07 15:03:51,516] 117 root - INFO - INFO - Image Extraction Completed
+[2025-08-07 15:03:51,520] 80 root - ERROR - ERROR - Exception in main Streamlit app:
+[2025-08-07 15:03:51,520] 81 root - ERROR - ERROR - 'ImageClassifier' object has no attribute 'classify_image'
+[2025-08-07 15:06:42,619] 19 root - INFO - INFO - \U0001f527 Initializing ImageClassifier
+[2025-08-07 15:06:42,619] 18 root - INFO - INFO - \U0001f504 Starting model loading process
+[2025-08-07 15:06:42,619] 22 root - INFO - INFO - \U0001f4df Using device: cpu
+[2025-08-07 15:06:42,713] 32 root - INFO - INFO - \u2705 Model loaded successfully on cpu
+[2025-08-07 15:06:42,713] 22 root - INFO - INFO - \u2705 Model initialized and ready for inference.
+[2025-08-07 15:06:42,713] 27 root - INFO - INFO - Detected URL: https://en.wikipedia.org/wiki/Cancer
+[2025-08-07 15:06:43,870] 31 root - INFO - INFO - \U0001f310 Opening: https://en.wikipedia.org/wiki/Cancer
+[2025-08-07 15:06:51,068] 37 root - INFO - INFO - \U0001f5bc\ufe0f Found 40 image sources.
+[2025-08-07 15:06:51,486] 55 root - INFO - INFO - \u274c Failed to decode image bytes: cannot identify image file <_io.BytesIO object at 0x00000200D531D2B0>
+[2025-08-07 15:06:51,486] 55 root - INFO - INFO - \u274c Failed to decode image bytes: cannot identify image file <_io.BytesIO object at 0x00000200D521F010>
+[2025-08-07 15:06:51,486] 55 root - INFO - INFO - \u274c Failed to decode image bytes: cannot identify image file <_io.BytesIO object at 0x00000200D666EA20>
+[2025-08-07 15:06:51,486] 55 root - INFO - INFO - \u274c Failed to decode image bytes: cannot identify image file <_io.BytesIO object at 0x00000200D521F010>
+[2025-08-07 15:06:51,849] 114 root - INFO - INFO - 
+\u2705 Extracted 36 images.
+[2025-08-07 15:06:51,849] 115 root - INFO - INFO - \u23f1\ufe0f Processing Time: 9.13 seconds
+[2025-08-07 15:06:51,849] 116 root - INFO - INFO - \U0001f4be Memory Usage: Current = 441.79 KB, Peak = 1585.19 KB
+[2025-08-07 15:06:51,849] 117 root - INFO - INFO - Image Extraction Completed
+[2025-08-07 15:06:51,849] 80 root - ERROR - ERROR - Exception in main Streamlit app:
+[2025-08-07 15:06:51,849] 81 root - ERROR - ERROR - 'ImageClassifier' object has no attribute 'classify_image'
+[2025-08-07 15:07:05,174] 19 root - INFO - INFO - \U0001f527 Initializing ImageClassifier
+[2025-08-07 15:07:05,175] 18 root - INFO - INFO - \U0001f504 Starting model loading process
+[2025-08-07 15:07:05,175] 22 root - INFO - INFO - \U0001f4df Using device: cpu
+[2025-08-07 15:07:05,267] 32 root - INFO - INFO - \u2705 Model loaded successfully on cpu
+[2025-08-07 15:07:05,267] 22 root - INFO - INFO - \u2705 Model initialized and ready for inference.
+[2025-08-07 15:07:08,918] 19 root - INFO - INFO - \U0001f527 Initializing ImageClassifier
+[2025-08-07 15:07:08,921] 18 root - INFO - INFO - \U0001f504 Starting model loading process
+[2025-08-07 15:07:08,923] 22 root - INFO - INFO - \U0001f4df Using device: cpu
+[2025-08-07 15:07:09,015] 32 root - INFO - INFO - \u2705 Model loaded successfully on cpu
+[2025-08-07 15:07:09,015] 22 root - INFO - INFO - \u2705 Model initialized and ready for inference.
+[2025-08-07 15:07:09,149] 19 root - INFO - INFO - \U0001f527 Initializing ImageClassifier
+[2025-08-07 15:07:09,149] 18 root - INFO - INFO - \U0001f504 Starting model loading process
+[2025-08-07 15:07:09,150] 22 root - INFO - INFO - \U0001f4df Using device: cpu
+[2025-08-07 15:07:09,232] 32 root - INFO - INFO - \u2705 Model loaded successfully on cpu
+[2025-08-07 15:07:09,232] 22 root - INFO - INFO - \u2705 Model initialized and ready for inference.
+[2025-08-07 15:07:09,232] 27 root - INFO - INFO - Detected URL: https://en.wikipedia.org/wiki/Cancer
+[2025-08-07 15:07:10,517] 31 root - INFO - INFO - \U0001f310 Opening: https://en.wikipedia.org/wiki/Cancer
+[2025-08-07 15:07:17,310] 37 root - INFO - INFO - \U0001f5bc\ufe0f Found 40 image sources.
+[2025-08-07 15:07:17,736] 55 root - INFO - INFO - \u274c Failed to decode image bytes: cannot identify image file <_io.BytesIO object at 0x00000200D542DA30>
+[2025-08-07 15:07:17,736] 55 root - INFO - INFO - \u274c Failed to decode image bytes: cannot identify image file <_io.BytesIO object at 0x00000200D52E5800>
+[2025-08-07 15:07:17,752] 55 root - INFO - INFO - \u274c Failed to decode image bytes: cannot identify image file <_io.BytesIO object at 0x00000200D658F740>
+[2025-08-07 15:07:17,752] 55 root - INFO - INFO - \u274c Failed to decode image bytes: cannot identify image file <_io.BytesIO object at 0x00000200D658F740>
+[2025-08-07 15:07:18,093] 114 root - INFO - INFO - 
+\u2705 Extracted 36 images.
+[2025-08-07 15:07:18,093] 115 root - INFO - INFO - \u23f1\ufe0f Processing Time: 8.85 seconds
+[2025-08-07 15:07:18,093] 116 root - INFO - INFO - \U0001f4be Memory Usage: Current = 439.07 KB, Peak = 1664.46 KB
+[2025-08-07 15:07:18,093] 117 root - INFO - INFO - Image Extraction Completed
+[2025-08-07 15:07:18,096] 80 root - ERROR - ERROR - Exception in main Streamlit app:
+[2025-08-07 15:07:18,096] 81 root - ERROR - ERROR - 'ImageClassifier' object has no attribute 'classify_image'
