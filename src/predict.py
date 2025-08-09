@@ -15,23 +15,28 @@ inference_transform = transforms.Compose([
 
 
 def classify_image(img, model):
-    """Classify image as 'medical' or 'non-medical' using the provided model."""
+    """Classify image as 'medical' or 'non-medical' and return (label, confidence%)."""
     try:
         device = 'cuda' if torch.cuda.is_available() else 'cpu'
         logging.logging.info(f"🖥️ Using device: {device}")
-        model.to(device)  
-        model.eval()  
+        model.to(device)
+        model.eval()
 
-        img_tensor = inference_transform(img).unsqueeze(0).to(device)  
+        # Prepare the image
+        img_tensor = inference_transform(img).unsqueeze(0).to(device)
 
-        with torch.no_grad():  
-            output = model(img_tensor)  
-            pred = torch.argmax(output, dim=1).item()  
+        with torch.no_grad():
+            output = model(img_tensor)  # raw logits
+            probs = torch.softmax(output, dim=1)[0]  # convert to probabilities
+            pred = torch.argmax(probs).item()
+            confidence = float(probs[pred] * 100)  # confidence in percentage
 
-        label = "medical" if pred == 0 else "non-medical"  
-        logging.logging.info(f"🔍 Prediction: {label} (class index: {pred})")  
-        return label  
+        # Map index to label
+        label = "medical" if pred == 0 else "non-medical"
+        logging.logging.info(f"🔍 Prediction: {label} ({confidence:.2f}%)")
 
-    except Exception as e:  
-        logging.logging.error(f"❌ Error during image classification: {e}")  
+        return label, confidence
+
+    except Exception as e:
+        logging.logging.error(f"❌ Error during image classification: {e}")
         raise CustomExceptionHandling(e, sys)

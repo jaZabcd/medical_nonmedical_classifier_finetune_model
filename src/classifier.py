@@ -9,6 +9,7 @@ from src.predict import classify_image
 from logger import logging
 from exception.exception_handing import CustomExceptionHandling
 import asyncio
+import os
 
 class ImageClassifier:
     def __init__(self, model_path: str):
@@ -37,56 +38,86 @@ class ImageClassifier:
     
         
     def _get_images(self, input_data: Union[str, bytes]) -> List[Image.Image]:
-        """
-        Automatically detects input type (URL or PDF) and extracts images.
-        Args:
-        input_data: URL string, PDF bytes, or file-like object
-        Returns:
-        List of PIL.Image.Image objects
-        """
         try:
-            # Detect input type
+            # Handle URL input
             if isinstance(input_data, str) and input_data.strip().lower().startswith(("http://", "https://")):
                 logging.logging.info("📥 Detected input type: URL")
                 return asyncio.run(extract_images_from_website_async(input_data))
+            
+            # Handle PDF bytes input
             elif isinstance(input_data, bytes):
-                logging.info("📥 Detected input type: PDF (bytes)")
+                logging.logging.info("📥 Detected input type: PDF (bytes)")
                 return extract_images_from_pdf_with_metrics(input_data)
-
+            
+            # Handle file-like objects
             elif hasattr(input_data, "read"):
-                logging.info("📥 Detected input type: PDF (file-like)")
+                logging.logging.info("📥 Detected input type: PDF (file-like)")
                 return extract_images_from_pdf_with_metrics(input_data.read())
-
+            
+            # Handle local file paths
+            elif isinstance(input_data, str) and os.path.exists(input_data):
+                # Check if it's a PDF file
+                if input_data.lower().endswith('.pdf'):
+                    logging.logging.info("📥 Detected input type: Local PDF file")
+                    with open(input_data, "rb") as f:
+                        return extract_images_from_pdf_with_metrics(f.read())
+                # Handle image files
+                else:
+                    logging.logging.info("📥 Detected input type: Local image file")
+                    return [Image.open(input_data)]
+            
             else:
-                raise ValueError("Unable to detect input type. Must be a URL string, PDF bytes, or file-like object.")
-
+                raise ValueError(f"Unsupported input type: {type(input_data)}")
+                
         except Exception as e:
-            logging.error(f"❌ Failed to extract images in _get_images: {e}")
+            logging.logging.exception("❌ Failed to extract images")
             raise CustomExceptionHandling(e, sys)
         
-    def classify(self, input_data: Union[str, bytes], input_type: str = "url") -> List[Tuple[str, str]]:
+    
+        
+    def classify(
+    self, input_data: Union[str, bytes], input_type: str = "url"
+) -> Tuple[List[Tuple[Image.Image, str, float]], float, float, float, float]:
         """
         Classify all images from the given input (URL or PDF).
 
         Returns:
-            List of tuples with image label and prediction.
+            results (List[Tuple[Image.Image, str, float]]): Image, label, confidence.
+            total_inference_time (float): Total time for all images (seconds).
+            avg_inference_time (float): Average time per image (seconds).
+            throughput (float): Images per second.
+            model_size_mb (float): Model size in MB.
         """
         try:
             logging.logging.info(f"🔎 Starting classification for input type: {input_type}")
+
             images = self._get_images(input_data)
 
             if not images:
                 logging.logging.warning("⚠️ No images were found to classify.")
-                return []
+                return [], 0.0, 0.0, 0.0, 0.0
 
             results = []
-            for i, img in enumerate(images):
-                label = classify_image(img, self.model)
-                logging.logging.info(f"📸 Image {i + 1} classified as {label}")
-                results.append((f"Image {i + 1}", label))
+            import time
 
-            logging.logging.info("✅ Classification completed")
-            return results
+            
+
+            start = time.time()
+
+            for i, img in enumerate(images):
+                label, confidence = classify_image(img, self.model)
+                logging.logging.info(
+                    f"📸 Image {i + 1} classified as {label} ({confidence:.2f}%)"
+                )
+                results.append((img, label, confidence))
+
+            end = time.time()
+            total_inference_time = end - start
+            avg_inference_time = total_inference_time / len(images)
+            
+
+            return results, total_inference_time, avg_inference_time
+
         except Exception as e:
             logging.logging.error("❌ Error during classification")
             raise CustomExceptionHandling(e, sys)

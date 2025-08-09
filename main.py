@@ -13,7 +13,7 @@ def main(path):
         logging.logging.info(f"Classifying images from URL: {path}")
         results = classifier.classify(path)
 
-        for name, label in results:
+        for img, name, label in results:
             print(f"{name} => {label}")
             logging.logging.info(f"{name} => {label}")
 
