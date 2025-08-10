@@ -94,16 +94,11 @@ def main():
             else:
                 try:
                     with st.spinner("Processing PDF..."):
-                        # Create a temporary directory that won't be automatically deleted
-                        temp_dir = tempfile.mkdtemp()
-                        temp_path = os.path.join(temp_dir, pdf_file.name)
-                        
-                        # Write the uploaded file to the temp directory
-                        with open(temp_path, "wb") as f:
-                            f.write(pdf_file.getbuffer())
+                        # Read the file content as bytes
+                        pdf_bytes = pdf_file.getvalue()
                         
                         start_time = time.perf_counter()
-                        results, total_time, avg_time = classifier.classify(temp_path)
+                        results, total_time, avg_time = classifier.classify(pdf_bytes)
                         process_time = time.perf_counter() - start_time
                     
                     if not results:
@@ -112,16 +107,9 @@ def main():
                         st.success(f"Extracted {len(results)} images in {process_time:.2f} seconds")
                         show_performance_metrics(total_time, len(results))
                         show_image_predictions(results)
-                    
-                    # Clean up the temporary directory
-                    shutil.rmtree(temp_dir, ignore_errors=True)
-                    
                 except Exception as e:
                     error_details = CustomExceptionHandling(e, sys)
                     st.error(f"PDF processing failed: {error_details}")
-                    # Clean up if error occurs
-                    if 'temp_dir' in locals():
-                        shutil.rmtree(temp_dir, ignore_errors=True)
     
     # History Tab
     with history_tab:

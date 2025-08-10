@@ -44,27 +44,15 @@ class ImageClassifier:
                 logging.logging.info("📥 Detected input type: URL")
                 return asyncio.run(extract_images_from_website_async(input_data))
             
-            # Handle PDF bytes input
-            elif isinstance(input_data, bytes):
-                logging.logging.info("📥 Detected input type: PDF (bytes)")
+            # Handle PDF input (both bytes and file paths)
+            elif isinstance(input_data, (bytes, str)):
+                logging.logging.info("📥 Detected PDF input")
                 return extract_images_from_pdf_with_metrics(input_data)
             
             # Handle file-like objects
             elif hasattr(input_data, "read"):
-                logging.logging.info("📥 Detected input type: PDF (file-like)")
+                logging.logging.info("📥 Detected file-like object")
                 return extract_images_from_pdf_with_metrics(input_data.read())
-            
-            # Handle local file paths
-            elif isinstance(input_data, str) and os.path.exists(input_data):
-                # Check if it's a PDF file
-                if input_data.lower().endswith('.pdf'):
-                    logging.logging.info("📥 Detected input type: Local PDF file")
-                    with open(input_data, "rb") as f:
-                        return extract_images_from_pdf_with_metrics(f.read())
-                # Handle image files
-                else:
-                    logging.logging.info("📥 Detected input type: Local image file")
-                    return [Image.open(input_data)]
             
             else:
                 raise ValueError(f"Unsupported input type: {type(input_data)}")
@@ -95,7 +83,7 @@ class ImageClassifier:
 
             if not images:
                 logging.logging.warning("⚠️ No images were found to classify.")
-                return [], 0.0, 0.0, 0.0, 0.0
+                return [], 0.0, 0.0
 
             results = []
             import time

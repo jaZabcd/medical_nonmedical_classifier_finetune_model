@@ -11,7 +11,7 @@ def main(path):
         # Example: classify images from a URL
         
         logging.logging.info(f"Classifying images from URL: {path}")
-        results = classifier.classify(path)
+        results, total_time, avg_time = classifier.classify(path)
 
         for img, name, label in results:
             print(f"{name} => {label}")
